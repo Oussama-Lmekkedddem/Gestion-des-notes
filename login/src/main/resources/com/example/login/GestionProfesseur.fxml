@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="gestionProfesseurPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.login.Controller.GestionProfesseurController">
+    <children>
+        <BorderPane fx:id="gestionProfesseurBorder" layoutX="150.0" layoutY="50.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <top>
+                <Pane prefHeight="50.0" prefWidth="700.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <Label layoutX="54.0" layoutY="12.0" prefHeight="27.0" prefWidth="204.0" text="Gestion des professeurs" textFill="#0f2557">
+                            <font>
+                                <Font name="System Bold" size="18.0" />
+                            </font>
+                        </Label>
+                  <Button fx:id="returnBtn" layoutX="810.0" layoutY="13.0" mnemonicParsing="false" onAction="#returne" text="return" />
+                    </children>
+                </Pane>
+            </top>
+            <center>
+                <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0" style="-fx-background-color: #fff;" BorderPane.alignment="CENTER">
+                    <children>
+                        <Pane prefHeight="140.0" prefWidth="700.0">
+                            <children>
+                                <HBox prefHeight="141.0" prefWidth="900.0" spacing="10.0">
+                                    <children>
+                                        <Pane onMousePressed="#ajouterProfesseur" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #d9273d; -fx-background-radius: 5 35 5 5;">
+                                            <children>
+                                                <Label layoutX="21.0" layoutY="80.0" text="Ajouter Professeur" textFill="WHITE">
+                                                    <font>
+                                                        <Font name="System Bold" size="18.0" />
+                                                    </font>
+                                                </Label>
+                                            </children>
+                                        </Pane>
+                                        <Pane onMousePressed="#modifierProfesseur" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #d9273d; -fx-background-radius: 5 35 5 5;">
+                                            <children>
+                                                <Label layoutX="16.0" layoutY="80.0" text="Modifier Professeur" textFill="WHITE">
+                                                    <font>
+                                                        <Font name="System Bold" size="18.0" />
+                                                    </font>
+                                                </Label>
+                                            </children>
+                                        </Pane>
+                                        <Pane onMousePressed="#supprimerProfesseur" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #d9273d; -fx-background-radius: 5 35 5 5;">
+                                            <children>
+                                                <Label layoutX="8.0" layoutY="80.0" style="-fx-background-color: #d9273d;" text="Supprimer Professeur" textFill="WHITE">
+                                                    <font>
+                                                        <Font name="System Bold" size="18.0" />
+                                                    </font>
+                                                </Label>
+                                            </children>
+                                        </Pane>
+                                    </children>
+                                    <padding>
+                                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                    </padding>
+                                </HBox>
+                            </children>
+                        </Pane>
+                        <Pane prefHeight="412.0" prefWidth="700.0">
+                            <children>
+                                <ScrollPane prefHeight="409.0" prefWidth="900.0">
+                                    <content>
+                                        <TableView fx:id="professeurTableView" prefHeight="396.0" prefWidth="901.0">
+                                            <columns>
+                                                <TableColumn fx:id="idProfesseurColumn" prefWidth="106.39999234676361" text="ID Professeur" />
+                                                <TableColumn fx:id="nomProfesseurColumn" prefWidth="148.39997100830078" text="Nom Professeur" />
+                                                <TableColumn fx:id="prenomProfesseurColumn" prefWidth="142.800048828125" text="Prenom Professeur" />
+                                                <TableColumn fx:id="emailProfesseurColumn" prefWidth="317.1999816894531" text="Email Professeur" />
+                                                <TableColumn fx:id="departementIdColumn" prefWidth="168.400146484375" text="Departement ID" />
+                                            </columns>
+                                        </TableView>
+                                    </content>
+                                </ScrollPane>
+                            </children>
+                        </Pane>
+                    </children>
+                </VBox>
+            </center>
+        </BorderPane>
+    </children>
+</AnchorPane>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane fx:id="ajouterProfesseurPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.login.Controller.Proffeseur.AjouterProfesseurController">
+    <children>
+        <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <top>
+                <AnchorPane prefHeight="77.0" prefWidth="900.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <Label layoutX="401.0" layoutY="30.0" text="Ajouter Professeur" />
+                    </children>
+                </AnchorPane>
+            </top>
+            <center>
+                <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <Pane prefHeight="72.0" prefWidth="900.0">
+                            <children>
+                                <Label layoutX="184.0" layoutY="27.0" text="Nom Professeur :" />
+                                <TextField fx:id="nomProfesseurField" layoutX="500.0" layoutY="23.0" prefHeight="25.0" prefWidth="206.0" promptText="Nom Professeur" />
+                                <Label fx:id="nomProfeseurMsg" layoutX="727.0" layoutY="27.0" text="nomProfeseurMsg" textFill="RED" />
+                            </children>
+                        </Pane>
+                        <Pane prefHeight="72.0" prefWidth="900.0">
+                            <children>
+                                <Label layoutX="184.0" layoutY="27.0" text="Prenom Professeur :" />
+                                <TextField fx:id="prenomProfesseurField" layoutX="500.0" layoutY="23.0" prefHeight="25.0" prefWidth="206.0" promptText="Prenom Professeur" />
+                                <Label fx:id="prenomProfeseurMsg" layoutX="727.0" layoutY="31.0" text="prenomProfeseurMsg" textFill="RED" />
+                            </children>
+                        </Pane>
+                        <Pane prefHeight="72.0" prefWidth="900.0">
+                            <children>
+                                <Label layoutX="184.0" layoutY="27.0" text="Email Professeur :" />
+                                <TextField fx:id="emailProfesseurField" layoutX="500.0" layoutY="23.0" prefHeight="25.0" prefWidth="206.0" promptText="Email Professeur (@uae.ac.ma)" />
+                                <Label fx:id="emailProfeseurMsg" layoutX="732.0" layoutY="28.0" text="emailProfeseurMsg" textFill="RED" />
+                            </children>
+                        </Pane>
+                        <Pane prefHeight="190.0" prefWidth="900.0">
+                            <children>
+                                <Label layoutX="184.0" layoutY="27.0" text="Departement Professeur :" />
+                                <ComboBox fx:id="departementList" layoutX="500.0" layoutY="23.0" prefHeight="25.0" prefWidth="206.0" promptText="Departement" />
+                            </children>
+                        </Pane>
+                        <Pane prefHeight="72.0" prefWidth="900.0">
+                            <children>
+                                <Button fx:id="ajouterProfesseurBtn" layoutX="363.0" layoutY="24.0" mnemonicParsing="false" onAction="#ajouterProfesseur" prefHeight="25.0" prefWidth="175.0" text="Ajouter" />
+                            </children>
+                        </Pane>
+                    </children>
+                </VBox>
+            </center>
+        </BorderPane>
+    </children>
+</AnchorPane>

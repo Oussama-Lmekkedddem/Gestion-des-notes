@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="gestionDepartementPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.login.Controller.GestionDepartementController">
+    <children>
+        <BorderPane fx:id="gestionDepartementBorder" layoutX="150.0" layoutY="50.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <top>
+                <Pane prefHeight="50.0" prefWidth="700.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <Label layoutX="54.0" layoutY="12.0" prefHeight="27.0" prefWidth="204.0" text="Gestion des Departements" textFill="#d9273d">
+                            <font>
+                                <Font name="System Bold" size="18.0" />
+                            </font>
+                        </Label>
+                  <Button fx:id="returnButton" layoutX="828.0" layoutY="13.0" mnemonicParsing="false" onAction="#returne" style="-fx-background-color: transparent; -fx-border-color: #d9273d;" text="Return" />
+                    </children>
+                </Pane>
+            </top>
+            <center>
+                <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0" style="-fx-background-color: #fff;" BorderPane.alignment="CENTER">
+                    <children>
+                        <Pane prefHeight="140.0" prefWidth="700.0">
+                            <children>
+                                <HBox prefHeight="141.0" prefWidth="900.0" spacing="10.0">
+                                    <children>
+                                        <Pane onMousePressed="#ajouterDepartement" prefHeight="200.0" prefWidth="225.0" style="-fx-background-color: #d9273d; -fx-background-radius: 5 35 5 5;">
+                                            <children>
+                                                <Label layoutX="21.0" layoutY="80.0" text="Ajouter Departement" textFill="WHITE">
+                                                    <font>
+                                                        <Font name="System Bold" size="18.0" />
+                                                    </font>
+                                                </Label>
+                                            </children>
+                                        </Pane>
+                                        <Pane onMousePressed="#modifierDepartement" prefHeight="200.0" prefWidth="225.0" style="-fx-background-color: #d9273d; -fx-background-radius: 5 35 5 5;">
+                                            <children>
+                                                <Label layoutX="17.0" layoutY="80.0" text="Modifier Departement" textFill="WHITE">
+                                                    <font>
+                                                        <Font name="System Bold" size="18.0" />
+                                                    </font>
+                                                </Label>
+                                            </children>
+                                        </Pane>
+                                        <Pane onMousePressed="#supprimerDepartement" prefHeight="200.0" prefWidth="225.0" style="-fx-background-color: #d9273d; -fx-background-radius: 5 35 5 5;">
+                                            <children>
+                                                <Label layoutX="10.0" layoutY="80.0" text="Supprimer Departement" textFill="WHITE">
+                                                    <font>
+                                                        <Font name="System Bold" size="18.0" />
+                                                    </font>
+                                                </Label>
+                                            </children>
+                                        </Pane>
+                                    </children>
+                                    <padding>
+                                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                    </padding>
+                                </HBox>
+                            </children>
+                        </Pane>
+                        <Pane prefHeight="412.0" prefWidth="700.0">
+                            <children>
+                                <ScrollPane prefHeight="409.0" prefWidth="900.0">
+                                    <content>
+                                        <TableView fx:id="departementTableView" prefHeight="408.0" prefWidth="898.0">
+                                            <columns>
+                                                <TableColumn fx:id="idDepartementColumn" prefWidth="120.79998624324799" text="ID Departement" />
+                                                <TableColumn fx:id="designationDepartementColumn" prefWidth="255.19998931884766" text="Designation Departement" />
+                                                <TableColumn fx:id="professeurIdColumn" prefWidth="113.5999755859375" text="Professeur ID" />
+                                            </columns>
+                                        </TableView>
+                                    </content>
+                                </ScrollPane>
+                            </children>
+                        </Pane>
+                    </children>
+                </VBox>
+            </center>
+        </BorderPane>
+    </children>
+</AnchorPane>
