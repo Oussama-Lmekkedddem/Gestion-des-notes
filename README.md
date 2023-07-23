@@ -1,1 +1,1 @@
-"# Gestion-des-notes" 
+The "La gestion des notes" project is a JavaSwing application designed to help teachers manage student grades and generate school report cards. It uses Apache POI for document manipulation, HeberNate for web server deployment, and MySQL for database management. The project's key challenges were integrating various technologies and creating an intuitive user interface. The development process involved careful planning and creative problem-solving to achieve a user-friendly and efficient grades management solution for teachers.
